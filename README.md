@@ -1,7 +1,7 @@
 # yo-backend
 
 ### Quy chuẩn code
-> [Conversion code](https://github.com/VSWS/yo-backend/wiki/Conversion-code-for-project)
+> Link: [Conversion code](https://github.com/VSWS/yo-backend/wiki/Conversion-code-for-project)
 
 ### Cấu trúc thư mục
 ---
