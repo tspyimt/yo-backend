@@ -1,4 +1,4 @@
-# yo-backend
+# Yolosh Project - You only life once so be happy !
 
 ### 1. Quy chuẩn code
 > Link: [Conversion code](https://github.com/VSWS/yo-backend/wiki/Conversion-code-for-project)
