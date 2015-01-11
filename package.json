@@ -18,8 +18,15 @@
   "homepage": "https://github.com/VSWS/yo-backend",
   "dependencies": {
     "async": "^0.9.0",
+    "cli-table": "^0.3.1",
+    "colors": "^1.0.3",
+    "ejs": "^2.1.1",
     "express": "^4.10.7",
     "lodash": "^2.4.1",
-    "rethinkdb": "^1.15.0"
+    "rethinkdb": "^1.15.0",
+    "socket.io": "^1.2.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
   }
 }
