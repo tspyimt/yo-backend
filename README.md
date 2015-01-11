@@ -2,7 +2,8 @@
 ### Cấu trúc thư mục
 ---
 
-``` Stucter App
+```
+Structer App
 |-- /api        // Truy cập API Web Services của hệ thống
 |-- app.js      //  Khởi chạy hệ thống với Node.js 		
 |-- /boots			// Nạp các chức năng trước khi chạy hệ thống  
