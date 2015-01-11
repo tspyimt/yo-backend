@@ -2,7 +2,7 @@
 ### Cấu trúc thư mục
 ---
 
-``
+```
 |-- /api 			// truy cập API Web Services của hệ thống
 |-- app.js 		
 |-- /boots			// Nạp các chức năng trước khi chạy hệ thống  
@@ -16,4 +16,4 @@
 |----- /backend
 |----- /frontend
 |-- yo
-``
+```
