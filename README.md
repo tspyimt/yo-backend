@@ -1,7 +1,9 @@
 # yo-backend
+
+Quy chuẩn code hệ thống: * [Conversion code](https://github.com/VSWS/yo-backend/wiki/Conversion-code-for-project)
+
 ### Cấu trúc thư mục
 ---
-
 ```
 |-- /api        	// Truy cập API Web Services của hệ thống
 |-- app.js      	//  Khởi chạy hệ thống với Node.js 		
