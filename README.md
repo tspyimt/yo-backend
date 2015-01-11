@@ -1,9 +1,9 @@
 # yo-backend
 
-### Quy chuẩn code
+### 1. Quy chuẩn code
 > Link: [Conversion code](https://github.com/VSWS/yo-backend/wiki/Conversion-code-for-project)
 
-### Cấu trúc thư mục
+### 2. Cấu trúc thư mục
 ---
 ```
 |-- /api        	// Truy cập API Web Services của hệ thống
