@@ -1,0 +1,50 @@
+{
+    "common": {
+        "hashKeySecret": "Key Session",
+        "logger": {
+
+        }
+    },
+    "development": {
+        "app": {
+            "port": 1111,
+            "serverUrl": "http://localhost:1111",
+        },
+        "dataSource": {
+            "rethink": {
+                "url": "/bla bla"
+            },
+            "redis": {
+                "url": "bla bla"
+            }
+        }
+    },
+    "production": {
+        "app": {
+            "port": 2222,
+            "serverUrl": "http://localhost:2222",
+        },
+        "dataSource": {
+            "rethink": {
+                "url": "/bla bla"
+            },
+            "redis": {
+                "url": "bla bla"
+            }
+        }
+    },
+    "test": {
+    	"app" : {
+	    	"port": 3333,
+	        "serverUrl": "http://localhost:3333",	
+    	},       
+        "dataSource": {
+            "rethink": {
+                "url": "/bla bla"
+            },
+            "redis": {
+                "url": "bla bla"
+            }
+        }
+    }
+}

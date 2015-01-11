@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!--Set base site-->
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/sweetalert/lib/sweet-alert.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <!-- endbuild -->
+
+</head>
+
+<body ng-app="yoApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a ui-sref="main">Home</a>
+                </li>
+                <li><a ui-sref="about">About</a>
+                </li>
+                <li><a ui-sref="login">Login</a>
+                </li>
+            </ul>
+            <h3 class="text-muted">yo</h3>
+        </div>
+
+        <div ui-view></div>
+
+        <div class="footer">
+            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        </div>
+    </div>
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="/bower_components/es5-shim/es5-shim.js"></script>
+    <script src="/bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/sweetalert/lib/sweet-alert.js"></script>
+    <script src="bower_components/angular-sweetalert/SweetAlert.js"></script>
+    <script src="bower_components/angular-formly/dist/formly.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/satellizer/satellizer.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/boots.js -->
+    <script src="/scripts/bootstrap.js"></script>
+    <script src="/scripts/app.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/controllers.js -->
+    <script src="/scripts/controllers/main.js"></script>
+    <script src="/scripts/controllers/login.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/services.js -->
+    <script src="/scripts/services/yo-services.js"></script>
+    <script src="/scripts/services/auth.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/directives.js -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/filters.js -->
+    <!-- endbuild -->
+</body>
+
+</html>

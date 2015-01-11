@@ -1,0 +1,125 @@
+.center-form {
+    width: 330px;
+    margin: 12% auto;
+    background-color: #e4e7ec;
+}
+
+
+/* For button */
+.btn {
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+
+/* Facebook */
+.btn-facebook {
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 89, 152);
+    border: 1px solid rgb(51, 81, 144);
+}
+.btn-facebook:hover, .btn-facebook:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 71, 134);
+}
+
+/* Google plus */
+.btn-google-plus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(221, 75, 57);
+    border: 1px solid rgb(213, 67, 49);
+}
+.btn-google-plus:hover, .btn-google-plus:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(203, 57, 39);
+}
+
+
+/* Linker in */
+.btn-linkedin {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 123, 182);
+    border: 1px solid rgb(0, 115, 174);
+}
+.btn-linkedin:hover, .btn-linkedin:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 105, 164);
+}
+
+/* twitter */
+.btn-twitter {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 172, 237);
+    border: 1px solid rgb(0, 159, 219);
+}
+.btn-twitter:hover, .btn-twitter:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 144, 199);
+}
+
+/* Four square */
+.btn-foursquare {
+    color: rgb(255, 255, 255);
+    background-color: rgb(249, 72, 119);
+    border: 1px solid rgb(248, 33, 90);
+}
+.btn-foursquare:hover, .btn-foursquare:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(247, 23, 82);
+}
+
+
+/* Github */
+
+.btn-github {
+    color: rgb(255, 255, 255);
+    background-color: rgb(68, 68, 68);
+    border: 1px solid rgb(59, 59, 59);
+}
+.btn-github:hover, .btn-github:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 48, 48);
+}
+
+/* Yahoo */
+.btn-yahoo {
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 14, 158);
+    border: 1px solid rgb(88, 11, 117);
+}
+.btn-yahoo:hover, .btn-yahoo:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 48, 48);
+}
+
+
+/* Windows live */
+.btn-live {
+    color: rgb(255, 255, 255);
+    background-color: rgb(38, 114, 236);
+}
+.btn-live:hover, .btn-live:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 90, 205);
+}
+
+
+/* Other */
+.signup-or-separator {
+    position: relative;
+    height: 34px;
+    text-align: center;
+    background: none repeat scroll 0% 0% transparent;
+}
+.signup-or-separator hr {
+    width: 90%;
+    margin: -16px auto 10px;
+    /* border-top: 1px solid rgb(220, 224, 224);*/
+    border-top: 1px solid rgb(177, 168, 168);
+}
+.signup-or-separator .text {
+    display: inline-block;
+    padding: 8px;
+    margin: 0px;
+    background-color: #e4e7ec;
+}
