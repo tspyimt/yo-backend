@@ -1,11 +1,14 @@
 var express = require('express');
 var app = express();
+var EJS = require('ejs');
+var path = require('path');
 var http = require('http');
 var async = require('async');
 var AppBuilder = require('./modules/AppBuilder');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var compression = require('compression');
 
 
 // Defined some global variables
@@ -13,7 +16,7 @@ global.__appBaseDir = __dirname;
 global.__appEnv = process.env.NODE_ENV || "development";
 
 
-function parallel(mid) {
+function parallelMidd(mid) {
     return function(req, res, next) {
         async.each(mid, function(mw, cb) {
             mw(req, res, cb);
@@ -44,9 +47,10 @@ AppBuilder.initLogger(function (message, level) {
 // Config middlewares expressjs
 // ----------------------------
 
-app.use(parallel([
+app.use(parallelMidd([
+    compression(),
     bodyParser.json(),
-    bodyParser({
+    bodyParser.urlencoded({
         extended: true
     }),
     cookieParser(_config.hashKeySecret),
@@ -58,7 +62,6 @@ app.use(parallel([
 ]));
 
 
-
 //Export the app via getter in global
 global.__defineGetter__("_app", function () {
     return app;
@@ -68,7 +71,10 @@ global.__defineGetter__("_app", function () {
 
 // Setup expressjs
 app.set('port', _config.app.port);
+// app.set('views', path.join(__dirname, 'www', 'frontend'));
+app.set('view engine', 'ejs');
 
+app.use(express.static(path.join(__dirname, 'www', 'frontend')));
 app.get('/', function(req, res) {
     res.json('Yo!');
 });
