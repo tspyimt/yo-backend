@@ -28,8 +28,7 @@ node_modules
 .lock-wscript
 
 # FrontEnd
-www/frontend/bower_components
-www/frontend/node_modules
-www/backend/bower_components
-www/backend/node_modules
+bower_components
 
+# Disable tern port
+.tern-port
