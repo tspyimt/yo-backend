@@ -1,14 +1,21 @@
 {
     "common": {
-        "hashKeySecret": "Key Session",
+        "hashKeySecret":"124@24%$(*)dehdiwyglvhbwhrgweyr734yto78243tgt2384o2gto34yg3i4fgho9gy34f384f",
         "logger": {
-
+            "fullFormat": "[%level][%name-%pid][%file:%line][%time] - %message",
+            "minimalFormat": "[%name-%pid][%file:%line] - %message",
+            "level": "trace",
+            "appNameToDisplayInLog": "DN",
+            "showHidden": false,
+            "stdout": {
+                "enabled": true
+            }
         }
     },
     "development": {
         "app": {
             "port": 1111,
-            "serverUrl": "http://localhost:1111",
+            "serverUrl": "http://localhost:1111"
         },
         "dataSource": {
             "rethink": {
@@ -22,7 +29,7 @@
     "production": {
         "app": {
             "port": 2222,
-            "serverUrl": "http://localhost:2222",
+            "serverUrl": "http://localhost:2222"
         },
         "dataSource": {
             "rethink": {
@@ -34,10 +41,10 @@
         }
     },
     "test": {
-    	"app" : {
-	    	"port": 3333,
-	        "serverUrl": "http://localhost:3333",	
-    	},       
+        "app": {
+            "port": 3333,
+            "serverUrl": "http://localhost:3333"
+        },
         "dataSource": {
             "rethink": {
                 "url": "/bla bla"
