@@ -1,7 +1,10 @@
-# yo-backend
-### Cấu trúc thư mục
----
+# Yolosh Project - You only life once so be happy !
 
+### 1. Quy chuẩn code
+> Link: [Conversion code](https://github.com/VSWS/yo-backend/wiki/Conversion-code-for-project)
+
+### 2. Cấu trúc thư mục
+---
 ```
 |-- /api        	// Truy cập API Web Services của hệ thống
 |-- app.js      	//  Khởi chạy hệ thống với Node.js 		
