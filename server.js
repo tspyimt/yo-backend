@@ -11,6 +11,12 @@ var session = require('express-session');
 var compression = require('compression');
 
 
+app.get('/', function(req, res) {
+    res.json('Yo!');
+});
+
+
+
 // Defined some global variables
 global.__appBaseDir = __dirname;
 global.__appEnv = process.env.NODE_ENV || "development";
@@ -75,9 +81,6 @@ app.set('port', _config.app.port);
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'www', 'frontend')));
-app.get('/', function(req, res) {
-    res.json('Yo!');
-});
 
 var _server = http.createServer(app);
 var server = _server.listen(app.get('port'), function() {
