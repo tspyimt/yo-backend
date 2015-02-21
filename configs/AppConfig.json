@@ -17,12 +17,16 @@
             "port": 1111,
             "serverUrl": "http://localhost:1111"
         },
-        "dataSource": {
+        "databases": {
             "rethink": {
                 "url": "/bla bla"
             },
             "redis": {
                 "url": "bla bla"
+            },
+            "aerospike": {
+                "clusterIP" : "localhost",
+                "port" : 3000
             }
         }
     },
@@ -31,7 +35,7 @@
             "port": 2222,
             "serverUrl": "http://localhost:2222"
         },
-        "dataSource": {
+        "databases": {
             "rethink": {
                 "url": "/bla bla"
             },

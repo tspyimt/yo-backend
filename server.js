@@ -16,19 +16,10 @@ app.get('/', function(req, res) {
 });
 
 
-
 // Defined some global variables
 global.__appBaseDir = __dirname;
 global.__appEnv = process.env.NODE_ENV || "development";
 
-
-function parallelMidd(mid) {
-    return function(req, res, next) {
-        async.each(mid, function(mw, cb) {
-            mw(req, res, cb);
-        }, next);
-    };
-}
 
 //Initialize the config. Now the configurations will be available in _config global getter.
 AppBuilder.initConfig({
@@ -52,6 +43,13 @@ AppBuilder.initLogger(function (message, level) {
 //
 // Config middlewares expressjs
 // ----------------------------
+function parallelMidd(mid) {
+    return function(req, res, next) {
+        async.each(mid, function(mw, cb) {
+            mw(req, res, cb);
+        }, next);
+    };
+}
 
 app.use(parallelMidd([
     compression(),
@@ -90,3 +88,4 @@ var server = _server.listen(app.get('port'), function() {
 server.on('error', function(err) {
     log.error(err);
 });
+
