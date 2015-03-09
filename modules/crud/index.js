@@ -1,11 +1,17 @@
 /**
  * Created by tungtouch on 2/4/15.
  */
-var adapter = require('../adapter');
-var conn = adapter.conn;
+var as = require('aerospike');
+var conn = require('../adapter/connect');
 
+var client = as.client(conn.asConfig);
+var dbStatusCode = null;
 
-module.export = function(table){
+conn.connect( client, function (res) {
+    dbStatusCode = res;
+});
+
+module.export = function(){
   return {
       findAll : function (req, res) {
           r.table(table).run(conn, function (err, cursor) {
@@ -26,15 +32,9 @@ module.export = function(table){
               });
       },
 
-      create : function (req, res) {
-          var data = req.body;
-          console.log("Created: ", JSON.stringify(req.body));
+      create : function (key, value, callback) {
+          var key = as.key(conn.asDB.defaultNameSpace, conn.asDB.defaultSet, key);
 
-          r.table(table).insert(data).
-              run(conn, function (err, result) {
-                  if (err) throw err;
-                  res.send(JSON.stringify({status: 'OK', location: '/'+table+result.generated_keys[0]}));
-              })
       },
 
       update : function (req, res) {

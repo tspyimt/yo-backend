@@ -1,0 +1,31 @@
+
+<h1>Topic list</h1>
+<hr>
+<form name="topicForm" novalidate ng-submit="creatTopic()">
+    <div class="form-group" ng-class="{'has-error': topicForm.content.$invalid && topicForm.content.$dirty}">
+        <input type="text" class="form-control focus" name="title" placeholder="Title" autocomplete="off" required ng-model="field.title">
+        <span class="has-error control-label" ng-show=" topicForm.title.$invalid && topicForm.title.$dirty"> Title is required. </span>
+    </div>
+    <input type="text" class="form-control focus" name="icon" placeholder="Name Icon" autocomplete="off" required
+           ng-model="field.icon">
+    <span class="has-error control-label" ng-show=" topicForm.icon.$invalid && topicForm.icon.$dirty"> Icon is required. </span> </div>
+    <button class="btn btn-default" ng-disabled="topicForm.$invalid">Add</button>
+</form>
+<hr>
+<div class="list-group"><a class="list-group-item" ng-repeat="todo in todos">{{todo.content}}&nbsp; <i
+        class="glyphicon glyphicon-remove pull-right" ng-click="removeTodo(todo)"></i></a></div>
+
+
+<div class="jumbotron">
+
+    <p class="lead">
+        <img src="../../images/yeoman.png" alt="I'm Yeoman">
+    </p>
+    <ul ng-repeat="topic in topics">
+        <li><span class="glyphicon glyphicon-{{topic.icon}}"></span> {{topic.title}} <a href=""
+                                                                                        ng-click="removeTopic(topic.id)">Remove
+            Topic</a></li>
+    </ul>
+</div>
+
+

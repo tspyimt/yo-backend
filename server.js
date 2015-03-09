@@ -73,7 +73,7 @@ global.__defineGetter__("_app", function () {
 
 
 
-// Setup expressjs
+// Setup express.js
 app.set('port', _config.app.port);
 // app.set('views', path.join(__dirname, 'www', 'frontend'));
 app.set('view engine', 'ejs');

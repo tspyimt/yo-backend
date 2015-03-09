@@ -25,7 +25,7 @@ window.bootstrap = {
     },
     "login": {
       url: '/login',
-      templateUrl: "views/layouts/login.html",
+      templateUrl: "../views/partials/login.html",
       controller: "LoginCtrl"
     },
     "/debug": {
