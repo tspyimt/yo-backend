@@ -83,6 +83,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'www', 'frontend')));
 
+
 var _server = http.createServer(app);
 var server = _server.listen(app.get('port'), function() {
     log.info('Server was running at ' + _config.app.serverUrl);
