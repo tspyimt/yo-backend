@@ -1,0 +1,1 @@
+var userSchemas = require("./user.json");

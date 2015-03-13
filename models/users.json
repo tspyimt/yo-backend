@@ -1,0 +1,58 @@
+{
+  "users": {
+    "idUser" : {
+      "type" : "index",
+      "require" : true
+    },
+    "username": {
+      "type"    : "string",
+      "require" : true,
+      "length"  : 10
+    },
+    "firstName": {
+      "type"  : "string",
+      "length": 10
+    },
+    "lastName": {
+      "type"  : "string",
+      "length": 10
+    },
+    "email": {
+      "type"    : "string",
+      "require" : true,
+      "length"  : 50
+    },
+    "emailVerified" : {
+      "type"    : "boolean",
+      "default" : false
+    },
+    "credentials" : {
+      "type" : "string",
+      "length" : "50"
+    },
+    "status" : {
+      "require" : true,
+      "type" : "option",
+        "option" : {
+          "0" : "active",
+          "1" : "unActive",
+          "2" : "block"
+        }
+    },
+    "password" : {
+      "type"    : "password",
+      "require" : true
+    },
+    "oldPassword" : {
+      "type" : "password"
+    },
+    "created" : {
+      "type" : "date",
+      "require" : true
+    },
+    "lastUpdated" : {
+      "type" : "date",
+      "require" : true
+    }
+  }
+}
