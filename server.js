@@ -72,6 +72,9 @@ global.__defineGetter__("_app", function () {
 });
 
 
+AppBuilder.initModels(function () {
+
+});
 
 // Setup express.js
 app.set('port', _config.app.port);
@@ -79,7 +82,6 @@ app.set('port', _config.app.port);
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'www', 'frontend')));
-
 
 var _server = http.createServer(app);
 var server = _server.listen(app.get('port'), function() {
