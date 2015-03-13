@@ -1,0 +1,43 @@
+{
+  "steps": {
+    "idStep" : {
+      "type" : "index",
+      "require" : true
+    },
+    "url": {
+      "type"  : "string",
+      "require" : true,
+      "length": 255
+    },
+    "status": {
+      "require" : true,
+      "type"    : "option",
+      "option" : {
+        "0" : "active",
+        "1" : "unActive",
+        "2" : "block"
+      }
+    },
+    "types" : {
+      "type" : "option",
+      "option": {
+        "0" : "text",
+        "1" : "image",
+        "2" : "video",
+        "3" : "link"
+      }
+    },
+    "created" : {
+      "type" : "date",
+      "require" : true
+    },
+    "lastUpdated" : {
+      "type" : "date",
+      "require" : true
+    },
+    "topics_idTopic" : {
+      "type" : "related",
+      "relation" : "topics"
+    }
+  }
+}
