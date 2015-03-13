@@ -10,16 +10,10 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var compression = require('compression');
 
-var api = {
-    users : require('./api/users'),
-    repos : require('./api/repositories')
-};
 
 app.get('/', function(req, res) {
     res.json('Yo!');
 });
-
-app.use('/api/v1/users', api.users);
 
 
 // Defined some global variables
@@ -38,7 +32,6 @@ AppBuilder.initConfig({
 
 //Initialize the Logger. this is available in the "log" global object.
 var logOnStdOut = _config.logger.stdout.enabled;
-
 AppBuilder.initLogger(function (message, level) {
     if (logOnStdOut) {
         //Print on console the fully formatted message
@@ -72,6 +65,17 @@ app.use(parallelMidd([
     })
 ]));
 
+
+//Export the app via getter in global
+global.__defineGetter__("_app", function () {
+    return app;
+});
+
+
+AppBuilder.initModels(function () {
+
+});
+
 // Setup express.js
 app.set('port', _config.app.port);
 // app.set('views', path.join(__dirname, 'www', 'frontend'));
@@ -79,16 +83,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'www', 'frontend')));
 
-// CrossDomain - Access-Control-Allow-Origin
-app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST', 'PUT', 'DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
-    next();
-});
-
 var _server = http.createServer(app);
-
 var server = _server.listen(app.get('port'), function() {
     log.info('Server was running at ' + _config.app.serverUrl);
 });
