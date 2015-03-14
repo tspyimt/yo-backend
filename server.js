@@ -72,9 +72,6 @@ global.__defineGetter__("_app", function () {
 });
 
 
-AppBuilder.initModels(function () {
-
-});
 
 // Setup express.js
 app.set('port', _config.app.port);

@@ -19,11 +19,6 @@
             "serverUrl": "http://localhost:1111"
         },
         "databases": {
-            "mongodb": {
-                "url": "mongodb://localhost:27017/AppYo",
-                "poolSize": "100",
-                "ignoreConnectionError": false
-            },
             "rethink": {
                 "url": "/bla bla"
             },
