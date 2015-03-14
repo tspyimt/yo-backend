@@ -72,14 +72,6 @@ app.use(parallelMidd([
     })
 ]));
 
-
-//Export the app via getter in global
-global.__defineGetter__("_app", function () {
-    return app;
-});
-
-//AppBuilder.initModels(function () {});
-
 // Setup express.js
 app.set('port', _config.app.port);
 // app.set('views', path.join(__dirname, 'www', 'frontend'));
@@ -87,6 +79,13 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'www', 'frontend')));
 
+// CrossDomain - Access-Control-Allow-Origin
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST', 'PUT', 'DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+    next();
+});
 
 var _server = http.createServer(app);
 
