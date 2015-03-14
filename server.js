@@ -21,6 +21,7 @@ global.__appBaseDir = __dirname;
 global.__appEnv = process.env.NODE_ENV || "development";
 
 
+
 //Initialize the config. Now the configurations will be available in _config global getter.
 AppBuilder.initConfig({
     postProcess: function (config) {
@@ -75,14 +76,32 @@ global.__defineGetter__("_app", function () {
 AppBuilder.initModels(function () {
 
 });
+var api = {
+    users : require('./api/users'),
+    repos : require('./api/repositories')
+};
 
 // Setup express.js
 app.set('port', _config.app.port);
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 // app.set('views', path.join(__dirname, 'www', 'frontend'));
 app.set('view engine', 'ejs');
 
+// CrossDomain - Access-Control-Allow-Origin
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST', 'PUT', 'DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+    next();
+});
+
 app.use(express.static(path.join(__dirname, 'www', 'frontend')));
 
+
+// Router
+app.use('/api/v1/users', api.users);
 
 var _server = http.createServer(app);
 var server = _server.listen(app.get('port'), function() {

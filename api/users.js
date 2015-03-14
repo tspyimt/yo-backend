@@ -2,8 +2,7 @@
  * Created by tungtouch on 3/14/15.
  */
 var express = require('express'),
-    router = express.Router(),
-    db = require('../modules/adapter/connect');
+    router = express.Router();
 
 
 // middleware specific to this router
@@ -12,21 +11,41 @@ router.use(function timeLog(req, res, next) {
     next();
 });
 
-// define the home page route
-router.get('/', function(req, res) {
-    res.send('DATA:', key);
+// List Users
+router.get('/', function (req, res) {
+
+    User().findAll(function (err, data) {
+        if (err) {
+            console.log(err);
+        }
+        res.send('DATA:', data);
+    });
+
 });
 
 router.post('/', function (req, res) {
+    log.debug("Request Data:", req.body);
+
+    new User({
+            "email": req.body.email,
+            "username" : req.body.username,
+            "password" : req.body.password
+        })
+        .save(function (err, data) {
+            if (err) {
+                console.log("err:", err);
+            }
+            console.log("save:", data);
+        });
 
 });
 
 router.get('/getToken', function (req, res) {
-    res.send({'token': 1234567});
+    //res.send({'token': 1234567});
 });
 
 // define the about route
-router.get('/about', function(req, res) {
+router.get('/about', function (req, res) {
     res.send('About birds');
 });
 
