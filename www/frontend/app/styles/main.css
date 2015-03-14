@@ -1,0 +1,53 @@
+body {
+  background-color: #f6f6f6; }
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+  height: 44px;
+  line-height: 44px; }
+
+.navbar-fixed {
+  height: 44px; }
+
+nav .brand-logo {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+  nav .brand-logo:hover {
+    color: rgba(255, 255, 255, 0.9); }
+
+.widget {
+  margin: 0.5rem 0 0rem 0; }
+  .widget .widget-header {
+    color: #464646;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .015em;
+    line-height: 22px; }
+    .widget .widget-header i {
+      margin-right: 5px;
+      font-size: 20px; }
+  .widget .widget-content {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 0px 15px;
+    background: #fff;
+    border-radius: 4px; }
+    .widget .widget-content .collection {
+      border: none;
+      background: none; }
+      .widget .widget-content .collection .secondary-content {
+        right: 0px; }
+    .widget .widget-content a {
+      color: #333333;
+      height: 24px; }
+      .widget .widget-content a:hover {
+        cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */
