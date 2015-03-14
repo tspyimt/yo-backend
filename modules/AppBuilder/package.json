@@ -1,5 +1,0 @@
-{
-    "name":"App-Base-Builder",
-    "description":"This module defines the base framework for the app. We manage the conventions here.",
-    "main":"./libs/main"
-}

@@ -40,11 +40,12 @@ exports.initModels = function (callback) {
                     var name = item.toString().replace(/\.js$/, "");
                     var model = db.getModel(name);
                     model.ensureAllManuallyDefinedSchemaIndexes();
-                    Object.defineProperty(global, name, {
+                    Object.defineProperty(global, name+"Model", {
                         get: function () {
                             return model;
                         }
                     });
+                    console.log(global.UserModel);
                 });
             }
             callback();

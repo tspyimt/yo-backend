@@ -13,6 +13,7 @@
         }
     },
     "development": {
+        "version" : 1,
         "app": {
             "port": 1111,
             "serverUrl": "http://localhost:1111"

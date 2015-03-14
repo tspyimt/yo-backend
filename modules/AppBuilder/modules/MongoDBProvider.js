@@ -7,10 +7,12 @@ function Database(callback) {
 
     var mongoose = require("mongoose");
     this.connection = mongoose.createConnection(_config.databases.mongodb.url, {poolSize: _config.databases.mongodb.poolSize});
+
     this.connection.on('error', function () {
         log.error(arguments);
         if (_config.dataSource.mongo.ignoreConnectionError) callback(_this);
     });
+
     this.connection.once('open', function () {
         callback(_this);
     });
@@ -41,7 +43,7 @@ function Database(callback) {
     this.getModel = function(name) {
         if (!Boolean(models[name])) models[name] = new Models(name).createModel();
         return models[name];
-        ;
+
     };
 }
 
