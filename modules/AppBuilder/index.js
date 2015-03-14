@@ -40,7 +40,7 @@ exports.initModels = function (callback) {
                     var name = item.toString().replace(/\.js$/, "");
                     var model = db.getModel(name);
                     model.ensureAllManuallyDefinedSchemaIndexes();
-                    Object.defineProperty(global, name+"Model", {
+                    Object.defineProperty(global, name, {
                         get: function () {
                             return model;
                         }
