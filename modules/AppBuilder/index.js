@@ -45,7 +45,7 @@ exports.initModels = function (callback) {
                             return model;
                         }
                     });
-                    console.log(global.UserModel);
+
                 });
             }
             callback();
